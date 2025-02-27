@@ -5,7 +5,7 @@
   xmlns="https://www.example.com"
   elementFormDefault="qualified">
 
-    <xs:element name="Game"> 
+    <xs:element name="Games"> 
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Game" maxOccurs="unbounded">
