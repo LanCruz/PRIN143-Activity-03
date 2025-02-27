@@ -13,7 +13,7 @@
                         <xs:sequence>
                             <xs:element name="Id" type="xs:positiveInteger"/>
                             <xs:element name="Title" type="xs:string"/>
-                            <xs:element name="ReleaseDate" type="xs:date"/>
+                            <xs:element name="ReleaseDate" type="xs:string"/>
 
                             <xs:element name="Rating">
                                 <xs:complexType>
