@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="https://www.example.com"
+  xmlns="https://www.example.com"
+  elementFormDefault="qualified">
+
+    <xs:element name="Game"> 
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Game" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:positiveInteger"/>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="releaseDate" type="xs:date"/>
+
+                            <xs:element name="rating">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="status" type="xs:string"/>
+                                        <xs:element name="reviewSummary" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <xs:element name="price">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="actualPrice" type="xs:decimal"/>
+                                        <xs:element name="currentPrice" type="xs:decimal"/>
+                                        <xs:element name="onSale" type="xs:boolean"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="Platform" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+
+                            <xs:element name="categories">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Category" type="xs:string" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="isFree" type="xs:boolean"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
