@@ -36,7 +36,7 @@
 
                             <xs:element name="Platform" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
 
-                            <xs:element name="categories">
+                            <xs:element name="Categories">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="Category" type="xs:string" maxOccurs="unbounded"/>
